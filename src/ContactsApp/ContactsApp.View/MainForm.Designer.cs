@@ -145,6 +145,7 @@
             this.AddButton.Size = new System.Drawing.Size(32, 32);
             this.AddButton.TabIndex = 2;
             this.AddButton.UseVisualStyleBackColor = true;
+            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
             // ContactsList
             // 

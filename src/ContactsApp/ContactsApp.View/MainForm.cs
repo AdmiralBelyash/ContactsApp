@@ -31,5 +31,11 @@ namespace ContactsApp.View
         {
 
         }
+
+        private void AddButton_Click(object sender, EventArgs e)
+        {
+            var form = new ContactForm();
+            form.ShowDialog();
+        }
     }
 }
