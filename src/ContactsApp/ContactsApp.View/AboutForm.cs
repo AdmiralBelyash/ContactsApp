@@ -16,5 +16,10 @@ namespace ContactsApp.View
         {
             InitializeComponent();
         }
+
+        private void Label_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

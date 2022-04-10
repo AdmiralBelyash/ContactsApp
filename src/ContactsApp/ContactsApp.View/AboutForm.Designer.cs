@@ -47,9 +47,10 @@
             this.Label.AutoSize = true;
             this.Label.Location = new System.Drawing.Point(11, 249);
             this.Label.Name = "Label";
-            this.Label.Size = new System.Drawing.Size(98, 13);
+            this.Label.Size = new System.Drawing.Size(110, 13);
             this.Label.TabIndex = 15;
-            this.Label.Text = "2022 Burakov Ivan";
+            this.Label.Text = "2022 Burakov Ivan ©";
+            this.Label.Click += new System.EventHandler(this.Label_Click);
             // 
             // linkLabel1
             // 

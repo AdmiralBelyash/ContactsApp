@@ -38,5 +38,10 @@ namespace ContactsApp.View
             var form = new ContactForm();
             form.ShowDialog();
         }
+
+        private void VkLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
