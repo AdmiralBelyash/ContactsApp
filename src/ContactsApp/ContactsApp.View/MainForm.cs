@@ -43,5 +43,14 @@ namespace ContactsApp.View
         {
 
         }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            var result = MessageBox.Show("Вы уверены, что хотите выйти?", "Предупреждение", MessageBoxButtons.OKCancel);
+            if (result == DialogResult.Cancel)
+            {
+                e.Cancel = true;
+            }
+        }
     }
 }

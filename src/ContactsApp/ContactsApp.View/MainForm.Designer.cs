@@ -35,8 +35,8 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.RemoveButton = new System.Windows.Forms.Button();
             this.EditButton = new System.Windows.Forms.Button();
-            this.AddButton = new System.Windows.Forms.Button();
             this.ContactsList = new System.Windows.Forms.ListBox();
+            this.AddButton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.VkTextBox = new System.Windows.Forms.TextBox();
             this.EmailTextBox = new System.Windows.Forms.TextBox();
@@ -136,6 +136,19 @@
             this.EditButton.TabIndex = 3;
             this.EditButton.UseVisualStyleBackColor = true;
             // 
+            // ContactsList
+            // 
+            this.ContactsList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ContactsList.FormattingEnabled = true;
+            this.ContactsList.IntegralHeight = false;
+            this.ContactsList.Location = new System.Drawing.Point(6, 29);
+            this.ContactsList.Name = "ContactsList";
+            this.ContactsList.Size = new System.Drawing.Size(249, 371);
+            this.ContactsList.TabIndex = 0;
+            this.ContactsList.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            // 
             // AddButton
             // 
             this.AddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -149,19 +162,6 @@
             this.AddButton.TabIndex = 2;
             this.AddButton.UseVisualStyleBackColor = true;
             this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
-            // 
-            // ContactsList
-            // 
-            this.ContactsList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ContactsList.FormattingEnabled = true;
-            this.ContactsList.IntegralHeight = false;
-            this.ContactsList.Location = new System.Drawing.Point(6, 29);
-            this.ContactsList.Name = "ContactsList";
-            this.ContactsList.Size = new System.Drawing.Size(249, 371);
-            this.ContactsList.TabIndex = 0;
-            this.ContactsList.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // groupBox1
             // 
@@ -384,6 +384,7 @@
             this.MinimumSize = new System.Drawing.Size(600, 250);
             this.Name = "MainForm";
             this.Text = "ContactsApp";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
