@@ -26,7 +26,7 @@ namespace ContactsApp.Model
         /// <summary>
         /// Дата рождения
         /// </summary>
-        private DateTime _birthday;
+        private DateTime _date_of_birth;
 
         /// <summary>
         /// Айди вк контакта
@@ -45,7 +45,7 @@ namespace ContactsApp.Model
             {
                 if (value.Length > MAXLETTERCOUNT || value.Length == 0)
                 {
-                    throw new ArgumentException(value + "слишком большое или пустое значение");
+                    throw new ArgumentException(value + "very long or empty value");
                 }
                 _surname = value;
             }
@@ -60,31 +60,31 @@ namespace ContactsApp.Model
             {
                 if (value.Length > MAXLETTERCOUNT || value.Length == 0)
                 {
-                    throw new ArgumentException(value + "слишком большое или пустое значение");
+                    throw new ArgumentException(value + "very long or empty value");
                 }
                 _name = value;
             }
         }
-        public DateTime Birthday
+        public DateTime DateOfBirth
         {
             get 
             {
-                return _birthday;
+                return _date_of_birth;
             }
             set 
             {
                 if (value.Year < 1900)
                 {
                     throw new ArgumentException(
-                        "Год меньше чем 1900");
+                        "Less than 1900");
                 }
 
                 if (value > DateTime.Now)
                 {
                     throw new ArgumentException(
-                        "Дата позже чем сегодня");
+                        "Date late than now");
                 }
-                _birthday = value;
+                _date_of_birth = value;
             }
         }
         public string Email
@@ -97,7 +97,7 @@ namespace ContactsApp.Model
             {
                 if (value.Length > MAXLETTERCOUNT || value.Length == 0)
                 {
-                    throw new ArgumentException(value + "слишком большое или пустое значение");
+                    throw new ArgumentException(value + "very long or empty value");
                 }
                 _email = value;
             }
@@ -114,7 +114,7 @@ namespace ContactsApp.Model
             {
                 if (value.Length > MAXLETTERCOUNT || value.Length == 0)
                 {
-                    throw new ArgumentException(value + "слишком большое или пустое значение");
+                    throw new ArgumentException(value + "very long or empty value");
                 }
                 _vkId = value;
             }
@@ -127,7 +127,7 @@ namespace ContactsApp.Model
             this.Surname = surname;
             this.Name = name;
             this.PhoneNumber = phoneNumber;
-            this.Birthday = birthday;
+            this.DateOfBirth = birthday;
             this.Email = email;
             this.VkId = vkId;
         }
@@ -136,7 +136,7 @@ namespace ContactsApp.Model
         {
             return new Contact(this.Name, this.Surname,
                new PhoneNumber(this.PhoneNumber.Number),
-               this.Birthday, this.Email, this.VkId);
+               this.DateOfBirth, this.Email, this.VkId);
         }
     }
 }

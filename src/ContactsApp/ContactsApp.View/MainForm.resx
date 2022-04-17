@@ -147,7 +147,7 @@
         OkePLnLrhsSJv1FJ0n9FFmSe3LPDUgAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="EditButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="AddButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAABPtJREFUWEft
         lFlMXGUUx68mak2fNJUnEwto1dbWSOJDk6YUtA1IwRmYkdWOLKVSSgUKtVqoxBej9KktEZe4JC2QKXNR
@@ -174,7 +174,7 @@
         vaHiY1gc9x8oyESM97qwqgAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="AddButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="EditButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAABRlJREFUWEft
         lVtMXFUUhndj1CZ90iBRY6yFGB9MNfHRkLZQbZpgkaEzAoUWLdqKpZWrRQu1b7S2JiaWaIwpom1phoq3
