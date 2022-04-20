@@ -9,27 +9,27 @@ namespace ContactsApp.Model
     public class Contact : ICloneable
     {
         /// <summary>
-        /// Фамилия контакта
+        /// Фамилия контакта.
         /// </summary>
         private string _surname;
 
         /// <summary>
-        /// Имя контакта
+        /// Имя контакта.
         /// </summary>
         private string _name;
 
         /// <summary>
-        /// Емаил контакта
+        /// Емаил контакта.
         /// </summary>
         private string _email;
 
         /// <summary>
-        /// Дата рождения
+        /// Дата рождения.
         /// </summary>
         private DateTime _date_of_birth;
 
         /// <summary>
-        /// Айди вк контакта
+        /// Айди вк контакта.
         /// </summary>
         private string _vkId;
 

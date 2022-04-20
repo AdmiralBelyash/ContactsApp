@@ -32,7 +32,7 @@ namespace ContactsApp.View
             }
         }
         /// <summary>
-        /// Добавляет контакт с выбранными полями(заглушка по заданию)
+        /// Добавляет контакт с выбранными полями(заглушка по заданию).
         /// </summary>
         private void AddContact()
         {
@@ -58,7 +58,7 @@ namespace ContactsApp.View
                 ));
         }
         /// <summary>
-        /// Удаляет выбранный контакт по индексу
+        /// Удаляет выбранный контакт по индексу.
         /// </summary>
         /// <param name="index"></param>
         private void RemoveContact(int index)
@@ -76,7 +76,7 @@ namespace ContactsApp.View
             _project.Contacts.RemoveAt(index);
         }
         /// <summary>
-        /// Обновляет выбранный контакт по индексу
+        /// Обновляет выбранный контакт по индексу.
         /// </summary>
         /// <param name="index"></param>
         private void UpdateSelectedContact(int index)
@@ -96,7 +96,7 @@ namespace ContactsApp.View
             EmailTextBox.Text = contact.Email;
         }
         /// <summary>
-        /// Удаляет выбранный контакт
+        /// Удаляет выбранный контакт.
         /// </summary>
         private void ClearSelectedContact()
         {

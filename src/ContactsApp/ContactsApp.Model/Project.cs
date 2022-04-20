@@ -11,7 +11,7 @@ namespace ContactsApp.Model
         public List<Contact> Contacts { set; get; } = new List<Contact>();
 
 		/// <summary>
-		/// Возвращает список контактов отсортированных по фамилии
+		/// Возвращает список контактов отсортированных по фамилии.
 		/// </summary>
 		/// <returns></returns>
 		private IOrderedEnumerable<Contact> SortContacts()
