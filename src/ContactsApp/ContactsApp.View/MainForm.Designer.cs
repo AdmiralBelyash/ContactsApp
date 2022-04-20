@@ -273,7 +273,7 @@
             // PhoneLabel
             // 
             this.PhoneLabel.AutoSize = true;
-            this.PhoneLabel.Location = new System.Drawing.Point(26, 111);
+            this.PhoneLabel.Location = new System.Drawing.Point(26, 107);
             this.PhoneLabel.Name = "PhoneLabel";
             this.PhoneLabel.Size = new System.Drawing.Size(41, 13);
             this.PhoneLabel.TabIndex = 3;
@@ -284,9 +284,9 @@
             this.DateOfBirthLabel.AutoSize = true;
             this.DateOfBirthLabel.Location = new System.Drawing.Point(2, 83);
             this.DateOfBirthLabel.Name = "DateOfBirthLabel";
-            this.DateOfBirthLabel.Size = new System.Drawing.Size(65, 13);
+            this.DateOfBirthLabel.Size = new System.Drawing.Size(68, 13);
             this.DateOfBirthLabel.TabIndex = 2;
-            this.DateOfBirthLabel.Text = "DateOfBirth:";
+            this.DateOfBirthLabel.Text = "Date of birth:";
             // 
             // NameLabel
             // 

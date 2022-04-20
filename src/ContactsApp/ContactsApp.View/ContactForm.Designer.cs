@@ -71,7 +71,7 @@
             this.VkTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.VkTextBox.Location = new System.Drawing.Point(75, 142);
+            this.VkTextBox.Location = new System.Drawing.Point(75, 143);
             this.VkTextBox.Name = "VkTextBox";
             this.VkTextBox.Size = new System.Drawing.Size(444, 20);
             this.VkTextBox.TabIndex = 49;
@@ -82,7 +82,7 @@
             this.EmailTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.EmailTextBox.Location = new System.Drawing.Point(75, 116);
+            this.EmailTextBox.Location = new System.Drawing.Point(75, 117);
             this.EmailTextBox.Name = "EmailTextBox";
             this.EmailTextBox.Size = new System.Drawing.Size(444, 20);
             this.EmailTextBox.TabIndex = 48;
@@ -93,7 +93,7 @@
             this.PhoneTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.PhoneTextBox.Location = new System.Drawing.Point(75, 90);
+            this.PhoneTextBox.Location = new System.Drawing.Point(75, 91);
             this.PhoneTextBox.MaximumSize = new System.Drawing.Size(180, 20);
             this.PhoneTextBox.MinimumSize = new System.Drawing.Size(180, 20);
             this.PhoneTextBox.Name = "PhoneTextBox";
@@ -105,7 +105,7 @@
             // BirthdayDateTimePicker
             // 
             this.BirthdayDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.BirthdayDateTimePicker.Location = new System.Drawing.Point(75, 63);
+            this.BirthdayDateTimePicker.Location = new System.Drawing.Point(75, 64);
             this.BirthdayDateTimePicker.Name = "BirthdayDateTimePicker";
             this.BirthdayDateTimePicker.Size = new System.Drawing.Size(97, 20);
             this.BirthdayDateTimePicker.TabIndex = 46;
