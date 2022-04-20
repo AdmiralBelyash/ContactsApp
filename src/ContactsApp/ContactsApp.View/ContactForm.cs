@@ -68,7 +68,7 @@ namespace ContactsApp.View
             }
             if (_vkIdError != string.Empty)
             {
-                MessageBox.Show(_vkIdError)
+                MessageBox.Show(_vkIdError);
             }
 
         }
