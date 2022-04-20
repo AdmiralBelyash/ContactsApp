@@ -33,7 +33,7 @@ namespace ContactsApp.Model
 			{
 				if (value.ToString().Length > MAXDIGITCOUNT)
 				{
-					throw new ArgumentException("Номер телефона больше 11 символов");
+					throw new ArgumentException("Phone number more than 11 symbols");
 				}
 				this._number = value;
 			}

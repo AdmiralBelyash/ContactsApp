@@ -45,7 +45,7 @@ namespace ContactsApp.Model
             {
                 if (value.Length > MAXLETTERCOUNT || value.Length == 0)
                 {
-                    throw new ArgumentException(value + "very long or empty value");
+                    throw new ArgumentException(value + " very long or empty value");
                 }
                 _surname = value;
             }
@@ -60,7 +60,7 @@ namespace ContactsApp.Model
             {
                 if (value.Length > MAXLETTERCOUNT || value.Length == 0)
                 {
-                    throw new ArgumentException(value + "very long or empty value");
+                    throw new ArgumentException(value + " very long or empty value");
                 }
                 _name = value;
             }
@@ -76,13 +76,13 @@ namespace ContactsApp.Model
                 if (value.Year < 1900)
                 {
                     throw new ArgumentException(
-                        "Less than 1900");
+                        " Less than 1900");
                 }
 
                 if (value > DateTime.Now)
                 {
                     throw new ArgumentException(
-                        "Date late than now");
+                        " Date late than now");
                 }
                 _date_of_birth = value;
             }
@@ -97,7 +97,7 @@ namespace ContactsApp.Model
             {
                 if (value.Length > MAXLETTERCOUNT || value.Length == 0)
                 {
-                    throw new ArgumentException(value + "very long or empty value");
+                    throw new ArgumentException(value + " very long or empty value");
                 }
                 _email = value;
             }
@@ -114,7 +114,7 @@ namespace ContactsApp.Model
             {
                 if (value.Length > MAXLETTERCOUNT || value.Length == 0)
                 {
-                    throw new ArgumentException(value + "very long or empty value");
+                    throw new ArgumentException(value + " very long or empty value");
                 }
                 _vkId = value;
             }
