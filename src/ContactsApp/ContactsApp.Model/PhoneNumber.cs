@@ -15,6 +15,7 @@ namespace ContactsApp.Model
 		/// Номер телефона
 		/// </summary>
 		private long _number;
+
 		/// <summary>
 		/// Максимальное количетсов цифр в номере
 		/// </summary>

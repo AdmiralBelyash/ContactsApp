@@ -105,7 +105,6 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.groupBox1);
-            this.splitContainer1.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel2_Paint);
             this.splitContainer1.Size = new System.Drawing.Size(800, 455);
             this.splitContainer1.SplitterDistance = 260;
             this.splitContainer1.TabIndex = 2;
@@ -150,7 +149,7 @@
             this.ContactsListBox.Name = "ContactsListBox";
             this.ContactsListBox.Size = new System.Drawing.Size(249, 371);
             this.ContactsListBox.TabIndex = 0;
-            this.ContactsListBox.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            this.ContactsListBox.SelectedIndexChanged += new System.EventHandler(this.ContactslistBox_SelectedIndexChanged);
             // 
             // EditButton
             // 
@@ -196,9 +195,9 @@
             this.VkTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.VkTextBox.Location = new System.Drawing.Point(73, 156);
+            this.VkTextBox.Location = new System.Drawing.Point(89, 156);
             this.VkTextBox.Name = "VkTextBox";
-            this.VkTextBox.Size = new System.Drawing.Size(444, 20);
+            this.VkTextBox.Size = new System.Drawing.Size(413, 20);
             this.VkTextBox.TabIndex = 11;
             // 
             // EmailTextBox
@@ -206,9 +205,9 @@
             this.EmailTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.EmailTextBox.Location = new System.Drawing.Point(73, 130);
+            this.EmailTextBox.Location = new System.Drawing.Point(89, 130);
             this.EmailTextBox.Name = "EmailTextBox";
-            this.EmailTextBox.Size = new System.Drawing.Size(444, 20);
+            this.EmailTextBox.Size = new System.Drawing.Size(413, 20);
             this.EmailTextBox.TabIndex = 10;
             // 
             // PhoneTextBox
@@ -216,17 +215,17 @@
             this.PhoneTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.PhoneTextBox.Location = new System.Drawing.Point(73, 104);
-            this.PhoneTextBox.MaximumSize = new System.Drawing.Size(180, 20);
-            this.PhoneTextBox.MinimumSize = new System.Drawing.Size(180, 20);
+            this.PhoneTextBox.Location = new System.Drawing.Point(89, 104);
+            this.PhoneTextBox.MaximumSize = new System.Drawing.Size(130, 20);
+            this.PhoneTextBox.MinimumSize = new System.Drawing.Size(130, 20);
             this.PhoneTextBox.Name = "PhoneTextBox";
-            this.PhoneTextBox.Size = new System.Drawing.Size(180, 20);
+            this.PhoneTextBox.Size = new System.Drawing.Size(130, 20);
             this.PhoneTextBox.TabIndex = 9;
             // 
             // BirthdayDateTimePicker
             // 
             this.BirthdayDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.BirthdayDateTimePicker.Location = new System.Drawing.Point(73, 77);
+            this.BirthdayDateTimePicker.Location = new System.Drawing.Point(89, 78);
             this.BirthdayDateTimePicker.Name = "BirthdayDateTimePicker";
             this.BirthdayDateTimePicker.Size = new System.Drawing.Size(97, 20);
             this.BirthdayDateTimePicker.TabIndex = 8;
@@ -236,9 +235,9 @@
             this.NameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.NameTextBox.Location = new System.Drawing.Point(73, 52);
+            this.NameTextBox.Location = new System.Drawing.Point(89, 52);
             this.NameTextBox.Name = "NameTextBox";
-            this.NameTextBox.Size = new System.Drawing.Size(444, 20);
+            this.NameTextBox.Size = new System.Drawing.Size(413, 20);
             this.NameTextBox.TabIndex = 7;
             // 
             // SurnameTextBox
@@ -246,25 +245,24 @@
             this.SurnameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.SurnameTextBox.Location = new System.Drawing.Point(73, 26);
+            this.SurnameTextBox.Location = new System.Drawing.Point(89, 26);
             this.SurnameTextBox.Name = "SurnameTextBox";
-            this.SurnameTextBox.Size = new System.Drawing.Size(444, 20);
+            this.SurnameTextBox.Size = new System.Drawing.Size(413, 20);
             this.SurnameTextBox.TabIndex = 6;
             // 
             // VkLabel
             // 
             this.VkLabel.AutoSize = true;
-            this.VkLabel.Location = new System.Drawing.Point(22, 159);
+            this.VkLabel.Location = new System.Drawing.Point(38, 159);
             this.VkLabel.Name = "VkLabel";
             this.VkLabel.Size = new System.Drawing.Size(45, 13);
             this.VkLabel.TabIndex = 5;
             this.VkLabel.Text = "vk.com:";
-            this.VkLabel.Click += new System.EventHandler(this.VkLabel_Click);
             // 
             // EmailLabel
             // 
             this.EmailLabel.AutoSize = true;
-            this.EmailLabel.Location = new System.Drawing.Point(29, 133);
+            this.EmailLabel.Location = new System.Drawing.Point(45, 133);
             this.EmailLabel.Name = "EmailLabel";
             this.EmailLabel.Size = new System.Drawing.Size(38, 13);
             this.EmailLabel.TabIndex = 4;
@@ -273,7 +271,7 @@
             // PhoneLabel
             // 
             this.PhoneLabel.AutoSize = true;
-            this.PhoneLabel.Location = new System.Drawing.Point(26, 107);
+            this.PhoneLabel.Location = new System.Drawing.Point(42, 107);
             this.PhoneLabel.Name = "PhoneLabel";
             this.PhoneLabel.Size = new System.Drawing.Size(41, 13);
             this.PhoneLabel.TabIndex = 3;
@@ -282,16 +280,16 @@
             // DateOfBirthLabel
             // 
             this.DateOfBirthLabel.AutoSize = true;
-            this.DateOfBirthLabel.Location = new System.Drawing.Point(2, 83);
+            this.DateOfBirthLabel.Location = new System.Drawing.Point(18, 81);
             this.DateOfBirthLabel.Name = "DateOfBirthLabel";
-            this.DateOfBirthLabel.Size = new System.Drawing.Size(68, 13);
+            this.DateOfBirthLabel.Size = new System.Drawing.Size(65, 13);
             this.DateOfBirthLabel.TabIndex = 2;
-            this.DateOfBirthLabel.Text = "Date of birth:";
+            this.DateOfBirthLabel.Text = "DateOfBirth:";
             // 
             // NameLabel
             // 
             this.NameLabel.AutoSize = true;
-            this.NameLabel.Location = new System.Drawing.Point(29, 55);
+            this.NameLabel.Location = new System.Drawing.Point(45, 55);
             this.NameLabel.Name = "NameLabel";
             this.NameLabel.Size = new System.Drawing.Size(38, 13);
             this.NameLabel.TabIndex = 1;
@@ -300,7 +298,7 @@
             // SurnameLabel
             // 
             this.SurnameLabel.AutoSize = true;
-            this.SurnameLabel.Location = new System.Drawing.Point(15, 29);
+            this.SurnameLabel.Location = new System.Drawing.Point(31, 29);
             this.SurnameLabel.Name = "SurnameLabel";
             this.SurnameLabel.Size = new System.Drawing.Size(52, 13);
             this.SurnameLabel.TabIndex = 0;

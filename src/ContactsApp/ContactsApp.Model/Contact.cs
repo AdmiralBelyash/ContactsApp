@@ -9,6 +9,11 @@ namespace ContactsApp.Model
     public class Contact : ICloneable
     {
         /// <summary>
+        /// Максимально допустимое количество символов.
+        /// </summary>
+        public const int MAXLETTERCOUNT = 50;
+
+        /// <summary>
         /// Фамилия контакта.
         /// </summary>
         private string _surname;
@@ -33,7 +38,6 @@ namespace ContactsApp.Model
         /// </summary>
         private string _vkId;
 
-        public const int MAXLETTERCOUNT = 50;
 
         public string Surname
         {
@@ -87,6 +91,7 @@ namespace ContactsApp.Model
                 _date_of_birth = value;
             }
         }
+
         public string Email
         {
             get

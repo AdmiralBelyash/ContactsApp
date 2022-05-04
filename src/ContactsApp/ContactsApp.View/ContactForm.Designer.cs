@@ -136,7 +136,7 @@
             // VkLabel
             // 
             this.VkLabel.AutoSize = true;
-            this.VkLabel.Location = new System.Drawing.Point(24, 145);
+            this.VkLabel.Location = new System.Drawing.Point(24, 146);
             this.VkLabel.Name = "VkLabel";
             this.VkLabel.Size = new System.Drawing.Size(45, 13);
             this.VkLabel.TabIndex = 43;
@@ -145,7 +145,7 @@
             // EmailLabel
             // 
             this.EmailLabel.AutoSize = true;
-            this.EmailLabel.Location = new System.Drawing.Point(31, 119);
+            this.EmailLabel.Location = new System.Drawing.Point(31, 120);
             this.EmailLabel.Name = "EmailLabel";
             this.EmailLabel.Size = new System.Drawing.Size(38, 13);
             this.EmailLabel.TabIndex = 42;
@@ -154,7 +154,7 @@
             // PhoneLabel
             // 
             this.PhoneLabel.AutoSize = true;
-            this.PhoneLabel.Location = new System.Drawing.Point(28, 93);
+            this.PhoneLabel.Location = new System.Drawing.Point(28, 94);
             this.PhoneLabel.Name = "PhoneLabel";
             this.PhoneLabel.Size = new System.Drawing.Size(41, 13);
             this.PhoneLabel.TabIndex = 41;
@@ -163,7 +163,7 @@
             // DateOfBirthLabel
             // 
             this.DateOfBirthLabel.AutoSize = true;
-            this.DateOfBirthLabel.Location = new System.Drawing.Point(4, 69);
+            this.DateOfBirthLabel.Location = new System.Drawing.Point(4, 66);
             this.DateOfBirthLabel.Name = "DateOfBirthLabel";
             this.DateOfBirthLabel.Size = new System.Drawing.Size(65, 13);
             this.DateOfBirthLabel.TabIndex = 40;

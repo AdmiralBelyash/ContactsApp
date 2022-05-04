@@ -13,8 +13,8 @@ namespace ContactsApp.View
 {
     public partial class MainForm : Form
     {
+        //TODO change variable name
         private Project _project { get; set; }
-
 
         public MainForm()
         {
@@ -67,12 +67,15 @@ namespace ContactsApp.View
             {
                 return;
             }
+
             var result = MessageBox.Show($"Do you really want to remove {_project.Contacts[index].Surname}?",
                 "Warning", MessageBoxButtons.OKCancel);
+            
             if (result == DialogResult.Cancel)
             {
                 return;
             }
+
             _project.Contacts.RemoveAt(index);
         }
         /// <summary>
@@ -108,17 +111,6 @@ namespace ContactsApp.View
             EmailTextBox.Text = String.Empty;
         }
 
-        private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-            UpdateSelectedContact(ContactsListBox.SelectedIndex);
-        }
-
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var form = new AboutForm();
@@ -129,11 +121,6 @@ namespace ContactsApp.View
         {
             var form = new ContactForm();
             form.ShowDialog();
-        }
-
-        private void VkLabel_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -172,6 +159,11 @@ namespace ContactsApp.View
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void ContactslistBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            UpdateSelectedContact(ContactsListBox.SelectedIndex);
         }
     }
 }
