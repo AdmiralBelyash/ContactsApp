@@ -13,10 +13,19 @@ namespace ContactsApp.View
 {
     public partial class ContactForm : Form
     {
+        /// <summary>
+        /// Контакты.
+        /// </summary>
         private Contact _contact { get; set; }
 
+        /// <summary>
+        /// Ошибка(вернее строка ошибок).
+        /// </summary>
         private string _error { get; set; }
 
+        /// <summary>
+        /// Публичные контакты.
+        /// </summary>
         public Contact Contact
         {
             get
@@ -167,6 +176,11 @@ namespace ContactsApp.View
         private void OkButton_Click(object sender, EventArgs e)
         {
             CheckFormOnErrors();
+        }
+
+        private void CancelButton_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

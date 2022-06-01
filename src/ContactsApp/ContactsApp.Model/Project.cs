@@ -8,6 +8,9 @@ namespace ContactsApp.Model
 {
     public class Project
     {
+		/// <summary>
+		/// Список объектов контактов.
+		/// </summary>
         public List<Contact> Contacts { set; get; } = new List<Contact>();
 
 		/// <summary>

@@ -13,6 +13,9 @@ namespace ContactsApp.View
 {
     public partial class MainForm : Form
     {
+        /// <summary>
+        /// Поле для хранения объектов контактов.
+        /// </summary>
         private Project _project { get; set; }
 
         public MainForm()
