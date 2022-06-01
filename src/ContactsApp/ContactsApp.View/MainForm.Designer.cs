@@ -135,7 +135,7 @@
             this.AddButton.Size = new System.Drawing.Size(43, 37);
             this.AddButton.TabIndex = 3;
             this.AddButton.UseVisualStyleBackColor = true;
-            this.AddButton.Click += new System.EventHandler(this.AddButton_Click_1);
+            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
             // ContactsListBox
             // 
@@ -163,7 +163,7 @@
             this.EditButton.Size = new System.Drawing.Size(43, 37);
             this.EditButton.TabIndex = 2;
             this.EditButton.UseVisualStyleBackColor = true;
-            this.EditButton.Click += new System.EventHandler(this.AddButton_Click);
+            this.EditButton.Click += new System.EventHandler(this.EditButton_Click);
             // 
             // groupBox1
             // 

@@ -137,7 +137,7 @@ namespace ContactsApp.Model
             this.VkId = vkId;
         }
 
-        object ICloneable.Clone()
+        public object Clone()
         {
             return new Contact(this.Name, this.Surname,
                new PhoneNumber(this.PhoneNumber.Number),

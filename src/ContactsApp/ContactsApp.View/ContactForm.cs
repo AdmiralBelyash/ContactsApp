@@ -17,12 +17,29 @@ namespace ContactsApp.View
 
         private string _error { get; set; }
 
+        public Contact Contact
+        {
+            get
+            {
+                return _contact;
+            }
+            set
+            {
+                _contact = value;
+                UpdateForm();
+            }
+        }
+
 
         public ContactForm()
         {
             InitializeComponent();
-            _contact = new Contact("Ivan", "Burakov", new PhoneNumber(123123123), DateTime.Now,
-                "chupachups@mail.ru", "123123");
+            _error = String.Empty;
+            if (_contact == null)
+            {
+                _contact = new Contact("Ivan", "Burakov", new PhoneNumber(123123123), DateTime.Now,
+                                            "chupachups@mail.ru", "123123");
+            }
             UpdateForm();
         }
         private void UpdateForm()
@@ -40,6 +57,11 @@ namespace ContactsApp.View
             if (_error != string.Empty)
             {
                 MessageBox.Show(_error);
+            }
+            else
+            {
+                DialogResult = DialogResult.OK;
+                this.Close();
             }
 
         }
@@ -67,7 +89,7 @@ namespace ContactsApp.View
             }
             catch (ArgumentException exception)
             {
-               NameTextBox.BackColor = Color.LightPink;
+                NameTextBox.BackColor = Color.LightPink;
                 _error += $"\n{ exception.Message}";
             }
         }
@@ -91,7 +113,7 @@ namespace ContactsApp.View
             try
             {
                 _contact.PhoneNumber.Number = Int64.Parse(PhoneTextBox.Text);
-               PhoneTextBox.BackColor = Color.White;
+                PhoneTextBox.BackColor = Color.White;
             }
             catch (ArgumentException exception)
             {
@@ -109,7 +131,7 @@ namespace ContactsApp.View
             }
             catch (ArgumentException exception)
             {
-               EmailTextBox.BackColor = Color.LightPink;
+                EmailTextBox.BackColor = Color.LightPink;
                 _error += $"\n{ exception.Message}";
             }
         }
@@ -119,11 +141,11 @@ namespace ContactsApp.View
             try
             {
                 _contact.VkId = VkTextBox.Text;
-               VkTextBox.BackColor = Color.White;
+                VkTextBox.BackColor = Color.White;
             }
             catch (ArgumentException exception)
             {
-               VkTextBox.BackColor = Color.LightPink;
+                VkTextBox.BackColor = Color.LightPink;
                 _error += $"\n{ exception.Message}";
             }
         }

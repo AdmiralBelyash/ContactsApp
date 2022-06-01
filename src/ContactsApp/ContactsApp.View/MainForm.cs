@@ -36,26 +36,27 @@ namespace ContactsApp.View
         /// </summary>
         private void AddContact()
         {
-            var randomNames = new List<string>
+            var contactForm = new ContactForm();
+            var result = contactForm.ShowDialog();
+            var newContact = contactForm.Contact;
+            if (result == DialogResult.OK)
             {
-                "name", "oleg", "kirill", "shisha"
-            };
-            var randomSurnames = new List<string>
+                _project.Contacts.Add(newContact);
+            }
+        }
+        private void EditContact()
+        {
+            var contactForm = new ContactForm();
+            contactForm.Contact = GetEditContact(ContactsListBox.SelectedIndex);
+            var result = contactForm.ShowDialog();
+            if (result == DialogResult.OK)
             {
-                "khromov", "pakhomov", "podushkin"
-            };
-            var randomEmails = new List<string>
+                _project.Contacts[ContactsListBox.SelectedIndex] = contactForm.Contact;
+            }
+            else
             {
-                "khromov@mail.ru", "pakhomov@mail.ru", "podushkin@mail.ru"
-            };
-            _project.Contacts.Add(new Contact(
-                randomNames[new Random().Next(randomNames.Count)],
-                randomSurnames[new Random().Next(randomSurnames.Count)],
-                new PhoneNumber(new Random().Next()),
-                DateTime.Now,
-                randomEmails[new Random().Next(randomEmails.Count)],
-                new Random().Next().ToString()
-                ));
+
+            }
         }
         /// <summary>
         /// Удаляет выбранный контакт по индексу.
@@ -111,6 +112,11 @@ namespace ContactsApp.View
             EmailTextBox.Text = String.Empty;
         }
 
+        private Contact GetEditContact(int index)
+        {
+            return (Contact)_project.Contacts[index].Clone();
+        }
+
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var form = new AboutForm();
@@ -119,8 +125,8 @@ namespace ContactsApp.View
 
         private void AddButton_Click(object sender, EventArgs e)
         {
-            var form = new ContactForm();
-            form.ShowDialog();
+            AddContact();
+            UpdateListBox();
         }
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -132,9 +138,9 @@ namespace ContactsApp.View
             }
         }
 
-        private void AddButton_Click_1(object sender, EventArgs e)
+        private void EditButton_Click(object sender, EventArgs e)
         {
-            AddContact();
+            EditContact();
             UpdateListBox();
         }
 
