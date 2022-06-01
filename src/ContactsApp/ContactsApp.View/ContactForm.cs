@@ -39,6 +39,15 @@ namespace ContactsApp.View
             }
         }
 
+        /// <summary>
+        /// Константное значение цвета.
+        /// </summary>
+        public Color NormColor = Color.White;
+
+        /// <summary>
+        /// Цвет подсветки ошибки.
+        /// </summary>
+        public Color ErrorColor = Color.LightPink;
 
         public ContactForm()
         {
@@ -86,11 +95,11 @@ namespace ContactsApp.View
             try
             {
                 _contact.Surname = SurnameTextBox.Text;
-                SurnameTextBox.BackColor = Color.White;
+                SurnameTextBox.BackColor = NormColor;
             }
             catch (ArgumentException exception)
             {
-                SurnameTextBox.BackColor = Color.LightPink;
+                SurnameTextBox.BackColor = ErrorColor;
                 _error += $"\n{ exception.Message}";
             }
         }
@@ -100,11 +109,11 @@ namespace ContactsApp.View
             try
             {
                 _contact.Name = NameTextBox.Text;
-                NameTextBox.BackColor = Color.White;
+                NameTextBox.BackColor = NormColor;
             }
             catch (ArgumentException exception)
             {
-                NameTextBox.BackColor = Color.LightPink;
+                NameTextBox.BackColor = ErrorColor;
                 _error += $"\n{ exception.Message}";
             }
         }
@@ -114,11 +123,11 @@ namespace ContactsApp.View
             try
             {
                 _contact.DateOfBirth = BirthdayDateTimePicker.Value;
-                BirthdayDateTimePicker.BackColor = Color.White;
+                BirthdayDateTimePicker.BackColor = NormColor;
             }
             catch (ArgumentException exception)
             {
-                BirthdayDateTimePicker.BackColor = Color.LightPink;
+                BirthdayDateTimePicker.BackColor = ErrorColor;
                 _error += $"\n{ exception.Message}";
             }
         }
@@ -128,11 +137,11 @@ namespace ContactsApp.View
             try
             {
                 _contact.PhoneNumber.Number = Int64.Parse(PhoneTextBox.Text);
-                PhoneTextBox.BackColor = Color.White;
+                PhoneTextBox.BackColor = NormColor;
             }
             catch (ArgumentException exception)
             {
-                PhoneTextBox.BackColor = Color.LightPink;
+                PhoneTextBox.BackColor = ErrorColor;
                 _error += $"\n{ exception.Message}";
             }
         }
@@ -142,11 +151,11 @@ namespace ContactsApp.View
             try
             {
                 _contact.Email = EmailTextBox.Text;
-                EmailTextBox.BackColor = Color.White;
+                EmailTextBox.BackColor = NormColor;
             }
             catch (ArgumentException exception)
             {
-                EmailTextBox.BackColor = Color.LightPink;
+                EmailTextBox.BackColor = ErrorColor;
                 _error += $"\n{ exception.Message}";
             }
         }
@@ -156,11 +165,11 @@ namespace ContactsApp.View
             try
             {
                 _contact.VkId = VkTextBox.Text;
-                VkTextBox.BackColor = Color.White;
+                VkTextBox.BackColor = NormColor;
             }
             catch (ArgumentException exception)
             {
-                VkTextBox.BackColor = Color.LightPink;
+                VkTextBox.BackColor = ErrorColor;
                 _error += $"\n{ exception.Message}";
             }
         }
