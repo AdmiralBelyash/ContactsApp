@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.FindLabel = new System.Windows.Forms.Label();
-            this.FindTextBox = new System.Windows.Forms.TextBox();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.RemoveButton = new System.Windows.Forms.Button();
             this.AddButton = new System.Windows.Forms.Button();
@@ -60,6 +59,8 @@
             this.removeContactToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.SearchDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.ClearSearchButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -77,16 +78,6 @@
             this.FindLabel.TabIndex = 0;
             this.FindLabel.Text = "Find:";
             // 
-            // FindTextBox
-            // 
-            this.FindTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.FindTextBox.Location = new System.Drawing.Point(39, 3);
-            this.FindTextBox.Name = "FindTextBox";
-            this.FindTextBox.Size = new System.Drawing.Size(216, 20);
-            this.FindTextBox.TabIndex = 1;
-            // 
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -95,10 +86,11 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.ClearSearchButton);
+            this.splitContainer1.Panel1.Controls.Add(this.SearchDateTimePicker);
             this.splitContainer1.Panel1.Controls.Add(this.RemoveButton);
             this.splitContainer1.Panel1.Controls.Add(this.AddButton);
             this.splitContainer1.Panel1.Controls.Add(this.ContactsListBox);
-            this.splitContainer1.Panel1.Controls.Add(this.FindTextBox);
             this.splitContainer1.Panel1.Controls.Add(this.EditButton);
             this.splitContainer1.Panel1.Controls.Add(this.FindLabel);
             // 
@@ -376,6 +368,25 @@
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
+            // SearchDateTimePicker
+            // 
+            this.SearchDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.SearchDateTimePicker.Location = new System.Drawing.Point(39, 3);
+            this.SearchDateTimePicker.Name = "SearchDateTimePicker";
+            this.SearchDateTimePicker.Size = new System.Drawing.Size(103, 20);
+            this.SearchDateTimePicker.TabIndex = 9;
+            this.SearchDateTimePicker.ValueChanged += new System.EventHandler(this.SearchDateTimePicker_ValueChanged);
+            // 
+            // ClearSearchButton
+            // 
+            this.ClearSearchButton.Location = new System.Drawing.Point(148, 3);
+            this.ClearSearchButton.Name = "ClearSearchButton";
+            this.ClearSearchButton.Size = new System.Drawing.Size(107, 20);
+            this.ClearSearchButton.TabIndex = 10;
+            this.ClearSearchButton.Text = "ClearSearch";
+            this.ClearSearchButton.UseVisualStyleBackColor = true;
+            this.ClearSearchButton.Click += new System.EventHandler(this.ClearSearchButton_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -406,7 +417,6 @@
         #endregion
 
         private System.Windows.Forms.Label FindLabel;
-        private System.Windows.Forms.TextBox FindTextBox;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.ListBox ContactsListBox;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -435,6 +445,8 @@
         private System.Windows.Forms.Button EditButton;
         private System.Windows.Forms.Button RemoveButton;
         private System.Windows.Forms.Button AddButton;
+        private System.Windows.Forms.DateTimePicker SearchDateTimePicker;
+        private System.Windows.Forms.Button ClearSearchButton;
     }
 }
 

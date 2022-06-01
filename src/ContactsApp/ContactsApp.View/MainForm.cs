@@ -26,6 +26,7 @@ namespace ContactsApp.View
         private void UpdateListBox()
         {
             ContactsListBox.Items.Clear();
+            _project.SortContacts();
             foreach (var contact in _project.Contacts)
             {
                 ContactsListBox.Items.Add(contact);
@@ -170,6 +171,24 @@ namespace ContactsApp.View
         private void ContactslistBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             UpdateSelectedContact(ContactsListBox.SelectedIndex);
+        }
+
+        private void SearchDateTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+            ContactsListBox.Items.Clear();
+            _project.SortContacts();
+            foreach (var contact in _project.Contacts)
+            {
+                if (contact.DateOfBirth.Date == SearchDateTimePicker.Value.Date)
+                {
+                    ContactsListBox.Items.Add(contact);
+                }
+            }
+        }
+
+        private void ClearSearchButton_Click(object sender, EventArgs e)
+        {
+            UpdateListBox();
         }
     }
 }
