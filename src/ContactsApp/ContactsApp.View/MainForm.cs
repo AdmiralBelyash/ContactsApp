@@ -13,7 +13,6 @@ namespace ContactsApp.View
 {
     public partial class MainForm : Form
     {
-        //TODO change variable name
         private Project _project { get; set; }
 
         public MainForm()

@@ -42,6 +42,9 @@ namespace ContactsApp.View
             }
             UpdateForm();
         }
+        /// <summary>
+        /// Обновление информации контакта на форме.
+        /// </summary>
         private void UpdateForm()
         {
             SurnameTextBox.Text = _contact.Surname;
@@ -52,6 +55,9 @@ namespace ContactsApp.View
             VkTextBox.Text = _contact.VkId;
         }
 
+        /// <summary>
+        /// Проверка формы на ошибки и складывание ошибок в общую строку.
+        /// </summary>
         private void CheckFormOnErrors()
         {
             if (_error != string.Empty)
