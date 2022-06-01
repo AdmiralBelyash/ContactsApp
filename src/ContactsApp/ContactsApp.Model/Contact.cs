@@ -132,6 +132,10 @@ namespace ContactsApp.Model
             this.Surname = surname;
             this.Name = name;
             this.PhoneNumber = phoneNumber;
+            if (birthday.Year < 1900)
+            {
+                birthday = DateTime.Now;
+            }
             this.DateOfBirth = birthday;
             this.Email = email;
             this.VkId = vkId;

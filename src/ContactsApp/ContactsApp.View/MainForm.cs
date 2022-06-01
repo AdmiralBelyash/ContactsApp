@@ -21,8 +21,12 @@ namespace ContactsApp.View
             InitializeComponent();
             _project = new Project();
             _project = ProjectManager.LoadFromFile();
+            UpdateListBox();
         }
 
+        /// <summary>
+        /// Обновляет данные в лист боксе.
+        /// </summary>
         private void UpdateListBox()
         {
             ContactsListBox.Items.Clear();
@@ -33,7 +37,7 @@ namespace ContactsApp.View
             }
         }
         /// <summary>
-        /// Добавляет контакт с выбранными полями(заглушка по заданию).
+        /// Добавляет контакт с выбранными полями.
         /// </summary>
         private void AddContact()
         {
@@ -44,7 +48,11 @@ namespace ContactsApp.View
             {
                 _project.Contacts.Add(newContact);
             }
+            ProjectManager.SaveToFile(_project);
         }
+        /// <summary>
+        /// Редактирование контакта.
+        /// </summary>
         private void EditContact()
         {
             var contactForm = new ContactForm();
@@ -58,6 +66,7 @@ namespace ContactsApp.View
             {
 
             }
+            ProjectManager.SaveToFile(_project);
         }
         /// <summary>
         /// Удаляет выбранный контакт по индексу.
@@ -79,11 +88,12 @@ namespace ContactsApp.View
             }
 
             _project.Contacts.RemoveAt(index);
+            ProjectManager.SaveToFile(_project);
         }
         /// <summary>
         /// Обновляет выбранный контакт по индексу.
         /// </summary>
-        /// <param name="index"></param>
+        /// <param name="index">Индекс контакта</param>
         private void UpdateSelectedContact(int index)
         {
             if (index == -1)
@@ -113,17 +123,20 @@ namespace ContactsApp.View
             EmailTextBox.Text = String.Empty;
         }
 
+        /// <summary>
+        /// Получение копии контакта по индексу.
+        /// </summary>
+        /// <param name="index"></param>
+        /// <returns></returns>
         private Contact GetEditContact(int index)
         {
             return (Contact)_project.Contacts[index].Clone();
         }
-
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var form = new AboutForm();
             form.ShowDialog();
         }
-
         private void AddButton_Click(object sender, EventArgs e)
         {
             AddContact();
@@ -137,6 +150,7 @@ namespace ContactsApp.View
             {
                 e.Cancel = true;
             }
+            ProjectManager.SaveToFile(_project);
         }
 
         private void EditButton_Click(object sender, EventArgs e)

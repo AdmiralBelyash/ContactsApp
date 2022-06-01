@@ -22,6 +22,10 @@ namespace ContactsApp.Model
 
         public static void SaveToFile(Project data)
         {
+            if (!File.Exists(DefaultPath))
+            {
+                CreatePath(_folder, _fileName);
+            }
             var serializer = new JsonSerializer();
             serializer.Formatting = Formatting.Indented;
             using (var sw = new StreamWriter(DefaultPath))
@@ -29,6 +33,33 @@ namespace ContactsApp.Model
             {
                 serializer.Serialize(writer, data);
             }
+        }
+
+        /// <summary>
+        /// Создает файл
+        /// </summary>
+        /// <param name="folder">File location</param>
+        /// <param name="fileName">File name</param>
+        public static void CreatePath(string folder, string fileName)
+        {
+            if (folder == null)
+            {
+                folder = _folder;
+            }
+            if (fileName == null)
+            {
+                fileName = _fileName;
+            }
+            if (!Directory.Exists(folder))
+            {
+                Directory.CreateDirectory(folder);
+            }
+            if (!File.Exists(folder + fileName))
+            {
+                File.Create(folder + fileName).Close();
+            }
+
+            DefaultPath = folder + fileName;
         }
         public static Project LoadFromFile()
         {
