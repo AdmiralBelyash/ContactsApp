@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icons8-contact-30.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -102,6 +105,11 @@
       <Project>{AC1D7124-FF38-4F15-B63D-8C8A5E857264}</Project>
       <Name>ContactsApp.Model</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="contactcard_contactcard_tarjetadecontacto_4815.ico" />
+    <Content Include="iconfinder-contat-us-10add-contact-4211837_115058 %281%29.ico" />
+    <Content Include="icons8-contact-30.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
