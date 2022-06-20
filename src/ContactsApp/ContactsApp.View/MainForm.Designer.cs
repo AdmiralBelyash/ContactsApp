@@ -200,6 +200,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.VkTextBox.Location = new System.Drawing.Point(89, 156);
             this.VkTextBox.Name = "VkTextBox";
+            this.VkTextBox.ReadOnly = true;
             this.VkTextBox.Size = new System.Drawing.Size(413, 20);
             this.VkTextBox.TabIndex = 11;
             // 
@@ -210,6 +211,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.EmailTextBox.Location = new System.Drawing.Point(89, 130);
             this.EmailTextBox.Name = "EmailTextBox";
+            this.EmailTextBox.ReadOnly = true;
             this.EmailTextBox.Size = new System.Drawing.Size(413, 20);
             this.EmailTextBox.TabIndex = 10;
             // 
@@ -222,11 +224,13 @@
             this.PhoneTextBox.MaximumSize = new System.Drawing.Size(130, 20);
             this.PhoneTextBox.MinimumSize = new System.Drawing.Size(130, 20);
             this.PhoneTextBox.Name = "PhoneTextBox";
+            this.PhoneTextBox.ReadOnly = true;
             this.PhoneTextBox.Size = new System.Drawing.Size(130, 20);
             this.PhoneTextBox.TabIndex = 9;
             // 
             // BirthdayDateTimePicker
             // 
+            this.BirthdayDateTimePicker.Enabled = false;
             this.BirthdayDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.BirthdayDateTimePicker.Location = new System.Drawing.Point(89, 78);
             this.BirthdayDateTimePicker.Name = "BirthdayDateTimePicker";
@@ -240,6 +244,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.NameTextBox.Location = new System.Drawing.Point(89, 52);
             this.NameTextBox.Name = "NameTextBox";
+            this.NameTextBox.ReadOnly = true;
             this.NameTextBox.Size = new System.Drawing.Size(413, 20);
             this.NameTextBox.TabIndex = 7;
             // 
@@ -250,6 +255,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.SurnameTextBox.Location = new System.Drawing.Point(89, 26);
             this.SurnameTextBox.Name = "SurnameTextBox";
+            this.SurnameTextBox.ReadOnly = true;
             this.SurnameTextBox.Size = new System.Drawing.Size(413, 20);
             this.SurnameTextBox.TabIndex = 6;
             // 

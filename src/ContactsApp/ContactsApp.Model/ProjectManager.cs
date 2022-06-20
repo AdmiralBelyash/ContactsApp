@@ -14,7 +14,7 @@ namespace ContactsApp.Model
 
         private static readonly string _folder = Environment.GetFolderPath(
                 Environment.SpecialFolder.ApplicationData) +
-            "\\ContactsApp\\";
+            "\\BurakovID_ContactsApp\\";
 
         private static readonly string _path = _folder + _fileName;
 
@@ -61,6 +61,13 @@ namespace ContactsApp.Model
 
             DefaultPath = folder + fileName;
         }
+
+        /// <summary>
+        /// Загрузка проекта из файла.
+        /// </summary>
+        /// <returns>
+        /// Возвращает загруженный проект из файла
+        /// </returns>
         public static Project LoadFromFile()
         {
             var serializer = new JsonSerializer();

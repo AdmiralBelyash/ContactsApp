@@ -18,6 +18,9 @@ namespace ContactsApp.View
         /// </summary>
         private Project _project { get; set; }
 
+        /// <summary>
+        /// Конструктор мейн формы.
+        /// </summary>
         public MainForm()
         {
             InitializeComponent();
@@ -136,11 +139,13 @@ namespace ContactsApp.View
         {
             return (Contact)_project.Contacts[index].Clone();
         }
+
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var form = new AboutForm();
             form.ShowDialog();
         }
+
         private void AddButton_Click(object sender, EventArgs e)
         {
             AddContact();
@@ -199,19 +204,6 @@ namespace ContactsApp.View
             UpdateSelectedContact((Contact)ContactsListBox.SelectedItem);
         }
 
-        //private void SearchDateTimePicker_ValueChanged(object sender, EventArgs e)
-        //{
-        //    ContactsListBox.Items.Clear();
-        //     _project.Contacts = _project.SortContacts();
-        //    foreach (var contact in _project.Contacts)
-        //    {
-        //        if (contact.DateOfBirth.Date == SearchDateTimePicker.Value.Date)
-        //        {
-        //            ContactsListBox.Items.Add(contact);
-        //        }
-        //    }
-        //}
-
         private void ClearSearchButton_Click(object sender, EventArgs e)
         {
             UpdateListBox();
@@ -219,7 +211,7 @@ namespace ContactsApp.View
         }
 
         /// <summary>
-        /// 
+        /// Поиск по фамилии при вводе текста в текстбокс поиска.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>

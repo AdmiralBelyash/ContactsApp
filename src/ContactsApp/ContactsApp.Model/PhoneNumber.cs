@@ -32,9 +32,15 @@ namespace ContactsApp.Model
 			}
 			set
 			{
-				if (value.ToString().Length > MAXDIGITCOUNT)
+				string numberString = value.ToString();
+				if (numberString.Length != MAXDIGITCOUNT)
 				{
 					throw new ArgumentException("Phone number more than 11 symbols");
+				}
+				if (numberString[0] != '7')
+				{
+					throw new ArgumentException(
+						"The first digit is not 7");
 				}
 				this._number = value;
 			}
