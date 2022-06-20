@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.FindLabel = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.ClearSearchButton = new System.Windows.Forms.Button();
             this.RemoveButton = new System.Windows.Forms.Button();
             this.AddButton = new System.Windows.Forms.Button();
             this.ContactsListBox = new System.Windows.Forms.ListBox();
@@ -59,8 +60,8 @@
             this.removeContactToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.SearchDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.ClearSearchButton = new System.Windows.Forms.Button();
+            this.SearchTextBox = new System.Windows.Forms.TextBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -86,8 +87,8 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.SearchTextBox);
             this.splitContainer1.Panel1.Controls.Add(this.ClearSearchButton);
-            this.splitContainer1.Panel1.Controls.Add(this.SearchDateTimePicker);
             this.splitContainer1.Panel1.Controls.Add(this.RemoveButton);
             this.splitContainer1.Panel1.Controls.Add(this.AddButton);
             this.splitContainer1.Panel1.Controls.Add(this.ContactsListBox);
@@ -100,6 +101,16 @@
             this.splitContainer1.Size = new System.Drawing.Size(800, 455);
             this.splitContainer1.SplitterDistance = 260;
             this.splitContainer1.TabIndex = 2;
+            // 
+            // ClearSearchButton
+            // 
+            this.ClearSearchButton.Location = new System.Drawing.Point(178, 3);
+            this.ClearSearchButton.Name = "ClearSearchButton";
+            this.ClearSearchButton.Size = new System.Drawing.Size(77, 22);
+            this.ClearSearchButton.TabIndex = 10;
+            this.ClearSearchButton.Text = "ClearSearch";
+            this.ClearSearchButton.UseVisualStyleBackColor = true;
+            this.ClearSearchButton.Click += new System.EventHandler(this.ClearSearchButton_Click);
             // 
             // RemoveButton
             // 
@@ -368,24 +379,18 @@
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
-            // SearchDateTimePicker
+            // SearchTextBox
             // 
-            this.SearchDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.SearchDateTimePicker.Location = new System.Drawing.Point(39, 3);
-            this.SearchDateTimePicker.Name = "SearchDateTimePicker";
-            this.SearchDateTimePicker.Size = new System.Drawing.Size(103, 20);
-            this.SearchDateTimePicker.TabIndex = 9;
-            this.SearchDateTimePicker.ValueChanged += new System.EventHandler(this.SearchDateTimePicker_ValueChanged);
+            this.SearchTextBox.Location = new System.Drawing.Point(39, 4);
+            this.SearchTextBox.Name = "SearchTextBox";
+            this.SearchTextBox.Size = new System.Drawing.Size(133, 20);
+            this.SearchTextBox.TabIndex = 11;
+            this.SearchTextBox.TextChanged += new System.EventHandler(this.SearchTextBox_TextChanged);
             // 
-            // ClearSearchButton
+            // contextMenuStrip1
             // 
-            this.ClearSearchButton.Location = new System.Drawing.Point(148, 3);
-            this.ClearSearchButton.Name = "ClearSearchButton";
-            this.ClearSearchButton.Size = new System.Drawing.Size(107, 20);
-            this.ClearSearchButton.TabIndex = 10;
-            this.ClearSearchButton.Text = "ClearSearch";
-            this.ClearSearchButton.UseVisualStyleBackColor = true;
-            this.ClearSearchButton.Click += new System.EventHandler(this.ClearSearchButton_Click);
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // MainForm
             // 
@@ -445,8 +450,9 @@
         private System.Windows.Forms.Button EditButton;
         private System.Windows.Forms.Button RemoveButton;
         private System.Windows.Forms.Button AddButton;
-        private System.Windows.Forms.DateTimePicker SearchDateTimePicker;
         private System.Windows.Forms.Button ClearSearchButton;
+        private System.Windows.Forms.TextBox SearchTextBox;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
     }
 }
 

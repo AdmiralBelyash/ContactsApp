@@ -38,6 +38,7 @@ namespace ContactsApp.View
                 ContactsListBox.Items.Add(contact);
             }
         }
+
         /// <summary>
         /// Добавляет контакт с выбранными полями.
         /// </summary>
@@ -51,7 +52,9 @@ namespace ContactsApp.View
                 _project.Contacts.Add(newContact);
             }
             ProjectManager.SaveToFile(_project);
+            ClearSelectedContact();
         }
+
         /// <summary>
         /// Редактирование контакта.
         /// </summary>
@@ -64,12 +67,10 @@ namespace ContactsApp.View
             {
                 _project.Contacts[ContactsListBox.SelectedIndex] = contactForm.Contact;
             }
-            else
-            {
-
-            }
             ProjectManager.SaveToFile(_project);
+            ClearSelectedContact();
         }
+
         /// <summary>
         /// Удаляет выбранный контакт по индексу.
         /// </summary>
@@ -91,20 +92,20 @@ namespace ContactsApp.View
 
             _project.Contacts.RemoveAt(index);
             ProjectManager.SaveToFile(_project);
+            ClearSelectedContact();
         }
+
         /// <summary>
         /// Обновляет выбранный контакт по индексу.
         /// </summary>
         /// <param name="index">Индекс контакта</param>
-        private void UpdateSelectedContact(int index)
+        private void UpdateSelectedContact(Contact contact)
         {
-            if (index == -1)
+            if (contact == null)
             {
-                ClearSelectedContact();
                 return;
             }
 
-            var contact = _project.Contacts[index];
             SurnameTextBox.Text = contact.Surname;
             NameTextBox.Text = contact.Name;
             PhoneTextBox.Text = contact.PhoneNumber.Number.ToString();
@@ -112,6 +113,7 @@ namespace ContactsApp.View
             VkTextBox.Text = contact.VkId;
             EmailTextBox.Text = contact.Email;
         }
+
         /// <summary>
         /// Удаляет выбранный контакт.
         /// </summary>
@@ -120,7 +122,7 @@ namespace ContactsApp.View
             SurnameTextBox.Text = String.Empty;
             NameTextBox.Text = String.Empty;
             PhoneTextBox.Text = String.Empty;
-            BirthdayDateTimePicker.Value = DateTime.MinValue;
+            BirthdayDateTimePicker.Text = String.Empty;
             VkTextBox.Text = String.Empty;
             EmailTextBox.Text = String.Empty;
         }
@@ -189,25 +191,49 @@ namespace ContactsApp.View
 
         private void ContactslistBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            UpdateSelectedContact(ContactsListBox.SelectedIndex);
+            if (ContactsListBox.SelectedIndex == -1)
+            {
+                ClearSelectedContact();
+                return;
+            }
+            UpdateSelectedContact((Contact)ContactsListBox.SelectedItem);
         }
 
-        private void SearchDateTimePicker_ValueChanged(object sender, EventArgs e)
-        {
-            ContactsListBox.Items.Clear();
-             _project.Contacts = _project.SortContacts();
-            foreach (var contact in _project.Contacts)
-            {
-                if (contact.DateOfBirth.Date == SearchDateTimePicker.Value.Date)
-                {
-                    ContactsListBox.Items.Add(contact);
-                }
-            }
-        }
+        //private void SearchDateTimePicker_ValueChanged(object sender, EventArgs e)
+        //{
+        //    ContactsListBox.Items.Clear();
+        //     _project.Contacts = _project.SortContacts();
+        //    foreach (var contact in _project.Contacts)
+        //    {
+        //        if (contact.DateOfBirth.Date == SearchDateTimePicker.Value.Date)
+        //        {
+        //            ContactsListBox.Items.Add(contact);
+        //        }
+        //    }
+        //}
 
         private void ClearSearchButton_Click(object sender, EventArgs e)
         {
             UpdateListBox();
+            ClearSelectedContact();
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void SearchTextBox_TextChanged(object sender, EventArgs e)
+        {
+            ContactsListBox.Items.Clear();
+            _project.Contacts = _project.SortContacts();
+            foreach (var contact in _project.Contacts)
+            {
+                if (contact.Surname.Contains(SearchTextBox.Text))
+                {
+                    ContactsListBox.Items.Add(contact);
+                }
+            }
         }
     }
 }
