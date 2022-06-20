@@ -156,7 +156,7 @@ namespace ContactsApp.View
             catch (ArgumentException exception)
             {
                 EmailTextBox.BackColor = ErrorColor;
-                _error += $"\n{ exception.Message}";
+                _error += $"{Environment.NewLine}{ exception.Message}";
             }
         }
 
@@ -189,7 +189,8 @@ namespace ContactsApp.View
 
         private void CancelButton_Click(object sender, EventArgs e)
         {
-            Close();
+            DialogResult = DialogResult.Cancel;
+            this.Close();
         }
     }
 }

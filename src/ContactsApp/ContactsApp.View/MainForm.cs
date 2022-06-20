@@ -32,7 +32,7 @@ namespace ContactsApp.View
         private void UpdateListBox()
         {
             ContactsListBox.Items.Clear();
-            _project.SortContacts();
+            _project.Contacts = _project.SortContacts();
             foreach (var contact in _project.Contacts)
             {
                 ContactsListBox.Items.Add(contact);
@@ -147,7 +147,10 @@ namespace ContactsApp.View
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            var result = MessageBox.Show("Are you sure want to exit?", "Warning", MessageBoxButtons.OKCancel);
+            var result = MessageBox.Show(
+                "Are you sure want to exit?", 
+                "Warning",
+                MessageBoxButtons.OKCancel);
             if (result == DialogResult.Cancel)
             {
                 e.Cancel = true;
@@ -192,7 +195,7 @@ namespace ContactsApp.View
         private void SearchDateTimePicker_ValueChanged(object sender, EventArgs e)
         {
             ContactsListBox.Items.Clear();
-            _project.SortContacts();
+             _project.Contacts = _project.SortContacts();
             foreach (var contact in _project.Contacts)
             {
                 if (contact.DateOfBirth.Date == SearchDateTimePicker.Value.Date)

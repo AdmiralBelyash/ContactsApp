@@ -17,7 +17,7 @@ namespace ContactsApp.Model
 		/// Возвращает список контактов отсортированных по фамилии.
 		/// </summary>
 		/// <returns></returns>
-		public void SortContacts()
+		public List<Contact> SortContacts()
 		{
 			for (int i = 0; i < Contacts.Count; i++)
 			{
@@ -26,9 +26,8 @@ namespace ContactsApp.Model
 					Contacts.RemoveAt(i);
 				}
 			}
-			Contacts = Contacts.OrderBy(
+			return Contacts.OrderBy(
 				contact => contact.Surname).ToList<Contact>();
-			var contacts = new List<Contact>();
 		}
 	}
 }
