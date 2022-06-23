@@ -227,5 +227,11 @@ namespace ContactsApp.View
                 }
             }
         }
+
+        private void editContactToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EditContact();
+            UpdateListBox();
+        }
     }
 }
